@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CISV 十二年：从参与者到组织者</title>
+<meta name="description" content="CISV International 个人经历总结：从 11 岁参与者到营地组织者的 12 年跨文化和平教育之旅。UNESCO 合作伙伴。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --c-bg:#FAF7F2;
+  --c-ink:#1A1A2E;
+  --c-ink-soft:#3D3D5C;
+  --c-ink-mute:#6B6B80;
+  --c-line:#E8E2D6;
+  --c-coral:#FF6B5B;
+  --c-sun:#FFC93C;
+  --c-teal:#2EC4B6;
+  --c-indigo:#3A50C2;
+  --c-violet:#8E44AD;
+  --c-leaf:#4CAF50;
+  --c-paper:#FFFFFF;
+  --c-dark:#1A1A2E;
+  --shadow-sm:0 1px 2px rgba(26,26,46,.06),0 1px 3px rgba(26,26,46,.08);
+  --shadow-md:0 4px 12px rgba(26,26,46,.08),0 2px 6px rgba(26,26,46,.06);
+  --shadow-lg:0 12px 32px rgba(26,26,46,.12),0 4px 12px rgba(26,26,46,.08);
+  --r:18px;
+  --r-sm:10px;
+  --r-lg:28px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter','Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--c-bg);
+  color:var(--c-ink);
+  line-height:1.7;
+  font-size:16px;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+
+/* ===== 滚动进度条 ===== */
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--c-coral),var(--c-sun),var(--c-teal),var(--c-indigo),var(--c-violet));z-index:200;width:0%;transition:width .1s linear}
+
+/* ===== 顶部导航 ===== */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(250,247,242,.85);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--c-line);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1100px;margin:0 auto;padding:0 24px}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:-.01em;transition:.3s}
+.nav-logo:hover{transform:scale(1.03)}
+.nav-logo img{height:32px;width:auto;transition:.3s}
+.nav-logo:hover img{filter:drop-shadow(0 2px 8px rgba(58,80,194,.3))}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-links a{padding:8px 14px;border-radius:9px;font-size:14px;font-weight:500;color:var(--c-ink-soft);transition:.18s;position:relative}
+.nav-links a::after{content:"";position:absolute;bottom:4px;left:14px;right:14px;height:2px;background:var(--c-indigo);border-radius:1px;transform:scaleX(0);transition:.25s}
+.nav-links a:hover{color:var(--c-ink)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.lang-toggle{
+  display:flex;align-items:center;gap:6px;
+  border:1.5px solid var(--c-ink);border-radius:999px;
+  padding:4px;margin-left:6px;background:var(--c-paper);
+}
+.lang-toggle button{
+  border:none;background:transparent;cursor:pointer;
+  font-family:inherit;font-weight:700;font-size:12px;
+  padding:4px 10px;border-radius:999px;color:var(--c-ink-soft);
+  transition:.18s;
+}
+.lang-toggle button.active{background:var(--c-ink);color:#fff}
+.nav-burger{display:none;background:none;border:none;cursor:pointer;font-size:24px;color:var(--c-ink)}
+
+/* ===== Hero ===== */
+.hero{
+  min-height:100vh;
+  padding:120px 0 60px;
+  position:relative;
+  display:flex;align-items:center;
+  overflow:hidden;
+}
+.hero-blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.35;z-index:0}
+.blob-1{width:420px;height:420px;background:var(--c-coral);top:-80px;right:-60px;animation:float 14s ease-in-out infinite}
+.blob-2{width:380px;height:380px;background:var(--c-teal);bottom:-100px;left:-80px;animation:float 18s ease-in-out infinite reverse}
+.blob-3{width:300px;height:300px;background:var(--c-sun);top:40%;left:50%;transform:translateX(-50%);animation:float 16s ease-in-out infinite}
+@keyframes float{
+  0%,100%{transform:translate(0,0) scale(1)}
+  33%{transform:translate(30px,-20px) scale(1.05)}
+  66%{transform:translate(-20px,30px) scale(.97)}
+}
+.hero-inner{position:relative;z-index:2;text-align:center}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--c-paper);border:1px solid var(--c-line);
+  padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;
+  color:var(--c-ink-soft);margin-bottom:24px;box-shadow:var(--shadow-sm);
+}
+.hero-eyebrow .pill{width:8px;height:8px;border-radius:50%;background:var(--c-leaf);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+.hero h1{
+  font-size:clamp(36px,6.5vw,72px);
+  line-height:1.08;letter-spacing:-.03em;font-weight:900;
+  margin-bottom:20px;
+}
+.hero h1 .grad{
+  background:linear-gradient(120deg,var(--c-coral),var(--c-indigo) 50%,var(--c-teal));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero-sub{
+  font-size:clamp(16px,2vw,20px);
+  color:var(--c-ink-soft);max-width:680px;margin:0 auto 32px;
+  line-height:1.6;
+}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:48px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 24px;border-radius:999px;
+  font-weight:700;font-size:15px;cursor:pointer;
+  border:2px solid transparent;transition:.2s;
+  font-family:inherit;
+}
+.btn-primary{background:var(--c-ink);color:#fff}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn-ghost{background:transparent;border-color:var(--c-ink);color:var(--c-ink)}
+.btn-ghost:hover{background:var(--c-ink);color:#fff}
+.hero-stats{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+  max-width:760px;margin:0 auto;
+}
+.stat{
+  background:var(--c-paper);border:1px solid var(--c-line);
+  border-radius:var(--r);padding:18px 12px;text-align:center;
+  box-shadow:var(--shadow-sm);transition:.3s;
+}
+.stat:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.stat .num{font-size:clamp(22px,3vw,30px);font-weight:900;letter-spacing:-.02em;color:var(--c-indigo)}
+.stat .num.coral{color:var(--c-coral)}
+.stat .num.teal{color:var(--c-teal)}
+.stat .num.sun{color:#D9A200}
+.stat .lab{font-size:12px;color:var(--c-ink-mute);margin-top:4px;font-weight:500}
+
+/* ===== Section 通用 ===== */
+section{padding:80px 0;position:relative}
+.sec-head{margin-bottom:48px}
+.sec-kicker{
+  display:block;font-size:13px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--c-ink-mute);margin-bottom:14px;
+}
+.sec-head h2{font-size:clamp(28px,4.5vw,44px);font-weight:900;letter-spacing:-.02em;line-height:1.15}
+
+/* ===== 组织介绍 ===== */
+.org-card{
+  background:var(--c-paper);border:1px solid var(--c-line);
+  border-radius:var(--r-lg);padding:40px;box-shadow:var(--shadow-md);
+  display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;
+}
+.org-text h3{font-size:24px;font-weight:800;margin-bottom:14px;letter-spacing:-.01em}
+.org-text p{color:var(--c-ink-soft);margin-bottom:12px}
+.org-text .highlight{background:linear-gradient(transparent 60%,rgba(255,201,60,.45) 60%);font-weight:700;padding:0 2px}
+.org-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.org-tag{font-size:12px;font-weight:600;padding:5px 12px;border-radius:999px;background:var(--c-bg);color:var(--c-ink-soft);border:1px solid var(--c-line)}
+.org-visual{
+  position:relative;border-radius:var(--r-lg);
+  background:linear-gradient(135deg,var(--c-indigo),var(--c-violet));
+  display:grid;place-items:center;overflow:hidden;
+  padding:40px 30px;
+}
+.org-visual::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(circle at 20% 30%,rgba(255,255,255,.18) 0,transparent 40%),
+  radial-gradient(circle at 80% 70%,rgba(255,201,60,.25) 0,transparent 40%);
+}
+.org-visual .logo-wrap{
+  position:relative;z-index:2;text-align:center;
+  animation:logoFloat 6s ease-in-out infinite;
+}
+@keyframes logoFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+}
+.org-visual .logo-wrap img{
+  width:140px;height:auto;filter:brightness(0) invert(1);margin-bottom:16px;
+}
+.org-visual .logo-wrap .logo-text{
+  color:#fff;font-size:14px;font-weight:700;letter-spacing:.1em;opacity:.8;
+}
+
+/* ===== 时间线 ===== */
+.timeline{position:relative;max-width:900px;margin:0 auto;padding-left:0}
+.timeline::before{
+  content:"";position:absolute;left:24px;top:8px;bottom:8px;width:3px;
+  background:linear-gradient(180deg,var(--c-coral),var(--c-sun),var(--c-teal),var(--c-indigo),var(--c-leaf));
+  border-radius:2px;
+}
+.tl-item{position:relative;padding-left:70px;margin-bottom:56px;cursor:pointer;transition:.25s}
+.tl-item:hover{padding-left:76px}
+.tl-item:last-child{margin-bottom:0}
+.tl-dot{
+  position:absolute;left:14px;top:6px;width:24px;height:24px;border-radius:50%;
+  background:var(--c-paper);border:3px solid var(--c-indigo);
+  display:grid;place-items:center;z-index:2;
+  transition:.3s;
+}
+.tl-item:hover .tl-dot{transform:scale(1.2);box-shadow:0 0 0 6px rgba(58,80,194,.15)}
+.tl-dot.coral{border-color:var(--c-coral)}
+.tl-dot.sun{border-color:#D9A200}
+.tl-dot.teal{border-color:var(--c-teal)}
+.tl-dot.violet{border-color:var(--c-violet)}
+.tl-dot.leaf{border-color:var(--c-leaf)}
+.tl-year{font-size:13px;font-weight:800;color:var(--c-indigo);letter-spacing:.05em}
+.tl-year.coral{color:var(--c-coral)}
+.tl-year.sun{color:#B58400}
+.tl-year.teal{color:var(--c-teal)}
+.tl-year.violet{color:var(--c-violet)}
+.tl-year.leaf{color:var(--c-leaf)}
+.tl-role{font-size:20px;font-weight:800;margin:2px 0 10px;letter-spacing:-.01em;transition:.2s}
+.tl-item:hover .tl-role{color:var(--c-indigo)}
+
+/* ===== 阶段卡片 ===== */
+.phase{
+  background:var(--c-paper);border:1px solid var(--c-line);
+  border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);
+  margin-bottom:40px;transition:.3s;
+}
+.phase:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+.phase-head{
+  padding:28px 32px 0;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;
+}
+.phase-head .left{flex:1;min-width:200px}
+.phase-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  padding:5px 12px;border-radius:999px;color:#fff;margin-bottom:10px;
+}
+.badge-coral{background:var(--c-coral)}
+.badge-sun{background:#D9A200}
+.badge-teal{background:var(--c-teal)}
+.badge-indigo{background:var(--c-indigo)}
+.badge-leaf{background:var(--c-leaf)}
+.phase-title{font-size:clamp(20px,3vw,28px);font-weight:900;letter-spacing:-.01em;line-height:1.2}
+.phase-body{padding:24px 32px 32px}
+.phase-quote{
+  border-left:5px solid var(--c-sun);
+  background:linear-gradient(90deg,rgba(255,201,60,.12),transparent);
+  padding:18px 22px;border-radius:0 12px 12px 0;
+  margin-bottom:22px;color:var(--c-ink-soft);
+}
+.phase-quote p{margin-bottom:8px}
+.phase-quote p:last-child{margin-bottom:0}
+.phase-harvest-label{
+  font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--c-teal);margin-bottom:14px;display:flex;align-items:center;gap:8px;
+}
+.phase-harvest-label::before{content:"";width:24px;height:2px;background:var(--c-teal)}
+.phase-harvest{list-style:none;margin-bottom:28px}
+.phase-harvest li{
+  position:relative;padding-left:30px;margin-bottom:12px;color:var(--c-ink-soft);
+  line-height:1.65;
+}
+.phase-harvest li::before{
+  content:"";position:absolute;left:0;top:9px;width:16px;height:16px;border-radius:50%;
+  background:var(--c-teal);opacity:.18;
+}
+.phase-harvest li::after{
+  content:"";position:absolute;left:5px;top:14px;width:6px;height:6px;border-radius:50%;background:var(--c-teal);
+}
+.phase-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.cap-tag{
+  font-size:13px;font-weight:700;padding:7px 14px;border-radius:999px;
+  border:1.5px solid var(--c-line);background:var(--c-bg);color:var(--c-ink);
+  transition:.18s;cursor:default;
+}
+.cap-tag:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.cap-tag.t1{border-color:rgba(255,107,91,.4);color:var(--c-coral)}
+.cap-tag.t2{border-color:rgba(62,196,182,.4);color:#1A8C82}
+.cap-tag.t3{border-color:rgba(58,80,194,.4);color:var(--c-indigo)}
+
+/* 照片网格 */
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+.photo-grid.cols-2{grid-template-columns:repeat(2,1fr)}
+.photo{
+  position:relative;aspect-ratio:4/3;border-radius:var(--r-sm);overflow:hidden;
+  background:linear-gradient(135deg,#EEE6D8,#E5DCC8);
+  cursor:pointer;transition:.4s cubic-bezier(.2,.7,.3,1);
+  transform-style:preserve-3d;
+}
+.photo:hover{transform:perspective(800px) rotateX(2deg) rotateY(-2deg) scale(1.02);box-shadow:var(--shadow-lg)}
+.photo img{width:100%;height:100%;object-fit:cover;transition:.5s cubic-bezier(.2,.7,.3,1)}
+.photo:hover img{transform:scale(1.08)}
+.photo.tall{aspect-ratio:3/4}
+.photo.wide{aspect-ratio:16/9}
+.photo .placeholder{
+  position:absolute;inset:0;display:grid;place-items:center;
+  color:var(--c-ink-mute);font-size:13px;font-weight:500;text-align:center;padding:12px;
+}
+.photo .placeholder svg{width:32px;height:32px;margin-bottom:6px;opacity:.5}
+.photo .caption{
+  position:absolute;left:0;right:0;bottom:0;
+  background:linear-gradient(transparent,rgba(0,0,0,.6));
+  color:#fff;font-size:12px;padding:18px 12px 10px;font-weight:600;
+  opacity:0;transform:translateY(8px);transition:.35s cubic-bezier(.2,.7,.3,1);
+}
+.photo:hover .caption{opacity:1;transform:translateY(0)}
+
+/* ===== 未来计划 ===== */
+.future-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:30px}
+.future-card{
+  background:var(--c-paper);border:1px solid var(--c-line);border-radius:var(--r);
+  padding:26px 22px;position:relative;overflow:hidden;box-shadow:var(--shadow-sm);
+  transition:.3s;
+}
+.future-card:hover{transform:translateY(-6px) rotate(0.5deg);box-shadow:var(--shadow-lg)}
+.future-card .num{
+  font-size:42px;font-weight:900;color:var(--c-leaf);opacity:.18;
+  line-height:1;position:absolute;right:14px;top:8px;
+}
+.future-card h4{font-size:17px;font-weight:800;margin-bottom:8px;letter-spacing:-.01em}
+.future-card p{font-size:14px;color:var(--c-ink-soft);line-height:1.55}
+.future-card.done h4::after{content:" · 进行中";font-size:11px;font-weight:700;color:var(--c-leaf);letter-spacing:.05em}
+
+.feeling-box{
+  background:linear-gradient(135deg,var(--c-indigo) 0%,var(--c-violet) 100%);
+  color:#fff;border-radius:var(--r-lg);padding:44px 40px;position:relative;overflow:hidden;
+}
+.feeling-box::before{
+  content:"";position:absolute;width:280px;height:280px;border-radius:50%;
+  background:rgba(255,255,255,.08);top:-100px;right:-60px;
+}
+.feeling-box::after{
+  content:"";position:absolute;width:200px;height:200px;border-radius:50%;
+  background:rgba(255,201,60,.15);bottom:-80px;left:-40px;
+}
+.feeling-box .quote-mark{font-size:60px;line-height:1;opacity:.4;font-family:Georgia,serif;margin-bottom:-10px;position:relative;z-index:2}
+.feeling-box p{font-size:clamp(16px,2vw,19px);line-height:1.8;position:relative;z-index:2;max-width:780px}
+.feeling-box p + p{margin-top:16px}
+
+/* ===== ESCAP 实习 ===== */
+.escap-section{background:linear-gradient(180deg,transparent,rgba(0,105,148,.04),transparent)}
+.escap-card{
+  background:var(--c-paper);border:1px solid var(--c-line);
+  border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);
+  display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;
+}
+.escap-body{padding:36px 36px 36px 40px;display:flex;flex-direction:column;justify-content:center}
+.escap-body h3{font-size:clamp(22px,3vw,30px);font-weight:900;margin-bottom:16px;letter-spacing:-.01em}
+.escap-body .escap-meta{
+  display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;
+}
+.escap-body .escap-meta span{
+  font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;
+  background:linear-gradient(135deg,rgba(0,105,148,.1),rgba(0,105,148,.05));
+  color:#006994;border:1px solid rgba(0,105,148,.2);
+}
+.escap-body p{color:var(--c-ink-soft);margin-bottom:12px;line-height:1.7}
+.escap-body .escap-link{
+  display:inline-flex;align-items:center;gap:6px;
+  color:var(--c-indigo);font-weight:700;font-size:14px;
+  margin-top:8px;transition:.2s;
+}
+.escap-body .escap-link:hover{gap:10px}
+.escap-photos{
+  display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px;
+  background:var(--c-bg);
+}
+.escap-photos .photo{border-radius:var(--r-sm);aspect-ratio:3/4}
+.escap-photos .photo:hover{transform:scale(1.03) rotate(0deg)}
+
+/* ===== 联系方式 ===== */
+.contact-section{
+  background:var(--c-dark);color:#fff;padding:80px 0 40px;
+}
+.contact-section h2{
+  font-size:clamp(28px,4vw,40px);font-weight:900;letter-spacing:-.02em;margin-bottom:40px;
+}
+.contact-links{
+  display:flex;gap:40px;flex-wrap:wrap;align-items:center;
+}
+.contact-link{
+  font-size:18px;font-weight:500;
+  border-bottom:1px solid rgba(255,255,255,.3);
+  padding-bottom:4px;transition:.2s;
+  color:rgba(255,255,255,.9);
+}
+.contact-link:hover{border-bottom-color:#fff;color:#fff}
+
+/* ===== Footer ===== */
+footer{
+  background:var(--c-dark);color:rgba(255,255,255,.5);padding:30px 0 40px;
+  border-top:1px solid rgba(255,255,255,.1);
+}
+.footer-line{
+  font-size:13px;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(255,255,255,.4);
+}
+
+/* ===== 滚动渐入 ===== */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.delay-1{transition-delay:.08s}
+.reveal.delay-2{transition-delay:.16s}
+.reveal.delay-3{transition-delay:.24s}
+.reveal.stagger-1{transition-delay:.06s}
+.reveal.stagger-2{transition-delay:.12s}
+.reveal.stagger-3{transition-delay:.18s}
+.reveal.stagger-4{transition-delay:.24s}
+
+/* ===== Lightbox ===== */
+.lightbox{position:fixed;inset:0;background:rgba(20,20,30,.92);z-index:1000;display:none;align-items:center;justify-content:center;padding:30px;backdrop-filter:blur(8px)}
+.lightbox.open{display:flex}
+.lightbox img{max-width:90%;max-height:85vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.5);animation:lbIn .3s cubic-bezier(.2,.7,.3,1)}
+@keyframes lbIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+.lightbox .lb-close{position:absolute;top:20px;right:28px;color:#fff;font-size:36px;cursor:pointer;line-height:1;background:none;border:none;font-family:inherit;transition:.2s}
+.lightbox .lb-close:hover{transform:scale(1.2)}
+
+/* ===== 响应式 ===== */
+@media(max-width:860px){
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--c-paper);flex-direction:column;padding:14px;border-bottom:1px solid var(--c-line);gap:2px}
+  .nav-links.open{display:flex}
+  .nav-links a{width:100%}
+  .nav-burger{display:block}
+  .lang-toggle{order:3}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .org-card{grid-template-columns:1fr;padding:28px}
+  .org-visual{padding:30px 20px}
+  .photo-grid,.photo-grid.cols-2{grid-template-columns:repeat(2,1fr)}
+  .future-grid{grid-template-columns:1fr}
+  .phase-head{padding:22px 22px 0}
+  .phase-body{padding:20px 22px 26px}
+  .feeling-box{padding:30px 24px}
+  .timeline::before{left:18px}
+  .tl-item{padding-left:54px}
+  .tl-dot{left:8px}
+  .contact-links{gap:24px}
+  .escap-card{grid-template-columns:1fr}
+  .escap-body{padding:28px 24px}
+  .escap-photos{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+  .photo-grid,.photo-grid.cols-2{grid-template-columns:1fr}
+  .hero-cta{flex-direction:column;align-items:stretch}
+  .btn{justify-content:center}
+  .escap-photos{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- 滚动进度条 -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ===== 顶部导航 ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <img src="assets/img/cisv-logo.png" alt="CISV" data-zh="CISV · Journey" data-en="CISV · Journey">
+      <span data-zh="CISV · Journey" data-en="CISV · Journey">CISV · Journey</span>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#about" data-zh="CISV 组织简介" data-en="About CISV">CISV 组织简介</a>
+      <a href="#timeline" data-zh="时间线" data-en="Timeline">时间线</a>
+      <a href="#phase1" data-zh="成长路径" data-en="Journey">成长路径</a>
+      <a href="#future" data-zh="未来规划" data-en="Future">未来规划</a>
+      <a href="#escap" data-zh="价值延伸" data-en="Impact">价值延伸</a>
+      <div class="lang-toggle">
+        <button id="langZh" class="active">中</button>
+        <button id="langEn">EN</button>
+      </div>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="菜单">☰</button>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<header class="hero">
+  <div class="hero-blob blob-1"></div>
+  <div class="hero-blob blob-2"></div>
+  <div class="hero-blob blob-3"></div>
+  <div class="hero-inner wrap">
+    <div class="hero-eyebrow"><span class="pill"></span><span data-zh="CISV INTERNATIONAL · UNESCO 合作伙伴" data-en="CISV INTERNATIONAL · UNESCO PARTNER">CISV INTERNATIONAL · UNESCO 合作伙伴</span></div>
+    <h1><span data-zh="CISV 十二年" data-en="CISV: Twelve Years">CISV 十二年</span><br><span class="grad" data-zh="从参与者到组织者" data-en="From Participant to Organizer">从参与者到组织者</span></h1>
+    <p class="hero-sub" data-zh="联合国教科文组织（UNESCO）合作伙伴 NGO · 12 年 · 4 个角色 · 4 个国家 · 12 支队伍培训 · 40+ 场教育活动。" data-en="UNESCO partner NGO · 12 years · 4 roles · 4 countries · 12 delegations trained · 40+ educational activities.">
+      联合国教科文组织（UNESCO）合作伙伴 NGO · 12 年 · 4 个角色 · 4 个国家 · 12 支队伍培训 · 40+ 场教育活动。
+    </p>
+    <div class="hero-cta">
+      <a href="#timeline" class="btn btn-primary"><span data-zh="看经历时间线" data-en="View timeline">看经历时间线</span> →</a>
+      <a href="https://cisv.org/" target="_blank" rel="noopener" class="btn btn-ghost"><span data-zh="了解 CISV 官网" data-en="About CISV (official)">了解 CISV 官网</span> ↗</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat reveal"><div class="num" data-count="12">0</div><div class="lab" data-zh="持续参与" data-en="Years involved">持续参与</div></div>
+      <div class="stat reveal delay-1"><div class="num coral" data-count="4">0</div><div class="lab" data-zh="角色演进" data-en="Role progression">角色演进</div></div>
+      <div class="stat reveal delay-2"><div class="num teal" data-count="4">0</div><div class="lab" data-zh="国家经历" data-en="Countries">国家经历</div></div>
+      <div class="stat reveal delay-3"><div class="num sun" data-count="40">0+</div><div class="lab" data-zh="教育活动策划" data-en="Activities organized">教育活动策划</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== 组织介绍 ===== -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker" data-zh="组织背景" data-en="The Organization">组织背景</span>
+      <h2 data-zh="这是什么组织，我从哪进来" data-en="What is this organization, and where I entered">这是什么组织，我从哪进来</h2>
+    </div>
+    <div class="org-card reveal">
+      <div class="org-text">
+        <h3 data-zh="CISV International" data-en="CISV International">CISV International</h3>
+        <p data-zh="1950 年由美国心理学家 Doris Twitchell Allen 创立，总部位于英国。CISV 是联合国教科文组织（UNESCO）的官方合作伙伴 NGO，同时具有欧洲委员会参与地位，是国际公认的和平教育组织。" data-en="Founded in 1950 by American psychologist Dr. Doris Twitchell Allen, headquartered in the UK. CISV is an official UNESCO partner NGO with participatory status at the Council of Europe, an internationally recognized peace education organization.">
+          1950 年由美国心理学家 Doris Twitchell Allen 创立，总部位于英国。CISV 是联合国教科文组织（UNESCO）的官方合作伙伴 NGO，同时具有欧洲委员会参与地位，是国际公认的<span class="highlight">和平教育</span>组织。
+        </p>
+        <p data-zh="覆盖 69 个国家、200 个地方分支、45,000+ 名成员，累计 7,000+ 场国际教育项目、30 万+ 参与者。核心方法是让来自不同国家的孩子从 11 岁起一起生活 3–4 周，在真实相处中学习。" data-en="Active in 69 countries, 200 chapters, 45,000+ members, with 7,000+ international programmes and 300,000+ participants to date. The core method: children from different countries live together for 3–4 weeks starting age 11, learning through real coexistence.">
+          覆盖 69 个国家、200 个地方分支、45,000+ 名成员，累计 7,000+ 场国际教育项目、30 万+ 参与者。核心方法是让来自不同国家的孩子从 11 岁起一起生活 3–4 周，在真实相处中学习。
+        </p>
+        <p data-zh="我于 2013 年（11 岁）加入 CISV 中国分部，先后以参与者、培训者、领队、营地工作人员四种身份参与国际营地，至今 12 年。" data-en="I joined CISV China in 2013, age 11, and have since taken on four roles — participant, trainer, leader, and camp staff — across international camps for 12 years.">
+          <strong>我于 2013 年（11 岁）加入 CISV 中国分部</strong>，先后以参与者、培训者、领队、营地工作人员四种身份参与国际营地，至今 12 年。
+        </p>
+        <div class="org-tags">
+          <span class="org-tag">UNESCO Partner</span>
+          <span class="org-tag" data-zh="1950 创立" data-en="Founded 1950">1950 创立</span>
+          <span class="org-tag" data-zh="69 国" data-en="69 countries">69 国</span>
+          <span class="org-tag" data-zh="和平教育" data-en="Peace Education">和平教育</span>
+          <span class="org-tag" data-zh="7 大国际项目" data-en="7 programmes">7 大国际项目</span>
+        </div>
+      </div>
+      <div class="org-visual">
+        <div class="logo-wrap">
+          <img src="assets/img/cisv-logo.png" alt="CISV International">
+          <div class="logo-text" data-zh="BUILDING GLOBAL FRIENDSHIP" data-en="BUILDING GLOBAL FRIENDSHIP">BUILDING GLOBAL FRIENDSHIP</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 时间线总览 ===== -->
+<section id="timeline" style="background:linear-gradient(180deg,transparent,rgba(255,201,60,.05),transparent)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker" data-zh="经历时间线" data-en="Timeline">经历时间线</span>
+      <h2 data-zh="12 年，4 个角色" data-en="12 years, 4 roles">12 年，4 个角色</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal stagger-1">
+        <div class="tl-dot coral"></div>
+        <div class="tl-year coral">2013 — 2023 · <span data-zh="参与者" data-en="Participant">参与者</span></div>
+        <div class="tl-role" data-zh="11 岁，第一次走进国际营地" data-en="Age 11, first international camp">11 岁，第一次走进国际营地</div>
+      </div>
+      <div class="tl-item reveal stagger-2">
+        <div class="tl-dot sun"></div>
+        <div class="tl-year sun">2024.03 · <span data-zh="培训者" data-en="Trainer">培训者</span></div>
+        <div class="tl-role" data-zh="中国区两名代表之一，赴东京受训" data-en="One of two China delegates, trained in Tokyo">中国区两名代表之一，赴东京受训</div>
+      </div>
+      <div class="tl-item reveal stagger-3">
+        <div class="tl-dot teal"></div>
+        <div class="tl-year teal">2024 暑假 · <span data-zh="领队" data-en="Leader">领队</span></div>
+        <div class="tl-role" data-zh="带 4 名 11 岁孩子赴韩，23 天全封闭" data-en="Led 4 eleven-year-olds to Korea, 23-day closed camp">带 4 名 11 岁孩子赴韩，23 天全封闭</div>
+      </div>
+      <div class="tl-item reveal stagger-4">
+        <div class="tl-dot violet"></div>
+        <div class="tl-year violet">2025 暑假 · <span data-zh="营地工作人员" data-en="Camp Staff">营地工作人员</span></div>
+        <div class="tl-role" data-zh="英国·曼彻斯特 · 唯一国际 staff" data-en="Manchester, UK · sole international staff">英国·曼彻斯特 · 唯一国际 staff</div>
+      </div>
+      <div class="tl-item reveal stagger-4">
+        <div class="tl-dot leaf"></div>
+        <div class="tl-year leaf">2025 — <span data-zh="至今 · 现任" data-en="Present · Current">至今 · 现任</span></div>
+        <div class="tl-role" data-zh="CISV 中国区青年代表" data-en="CISV China Youth Representative">CISV 中国区青年代表</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 阶段一：2013 参与者 ===== -->
+<section id="phase1">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker" data-zh="2013 · 参与者" data-en="2013 · Participant">2013 · 参与者</span>
+      <h2 data-zh="2013 年作为参与者参加 CISV" data-en="2013: Joined CISV as a participant">2013 年作为参与者参加 CISV</h2>
+    </div>
+    <div class="phase reveal">
+      <div class="phase-head">
+        <div class="left">
+          <div class="phase-badge badge-coral" data-zh="参与者 · 11 岁" data-en="Participant · Age 11">参与者 · 11 岁</div>
+          <div class="phase-title" data-zh="11 岁，第一次走进国际营地" data-en="Age 11, first international camp">11 岁，第一次走进国际营地</div>
+        </div>
+      </div>
+      <div class="phase-body">
+        <div class="phase-quote">
+          <p data-zh="2013 年，11 岁，作为中国分部的代表队成员参加 CISV Village 项目。每队由 4 名 11 岁孩子和 1 名成年领队组成，与来自约 12 个国家的队伍一起生活 3–4 周。" data-en="In 2013, age 11, I joined the CISV Village programme as a member of China's delegation. Each delegation is 4 eleven-year-olds plus one adult leader, living together for 3–4 weeks with delegations from ~12 countries.">
+            2013 年，11 岁，作为中国分部的代表队成员参加 CISV Village 项目。每队由 4 名 11 岁孩子和 1 名成年领队组成，与来自约 12 个国家的队伍一起生活 3–4 周。
+          </p>
+          <p data-zh="这个阶段我的身份是被照顾的孩子：所有活动由成年领队和营地工作人员设计、组织、执行，我负责参与和体验。CISV 的项目设计就是这样，让孩子在偏见形成之前，先和一个外国孩子真实地一起生活一个月。" data-en="My role at this stage was simply the child being cared for: all activities were designed, organized, and run by adult leaders and camp staff, and my job was to participate and experience. That is how CISV programmes are designed — before prejudices form, a child first lives for a month with children from other countries.">
+            这个阶段我的身份是被照顾的孩子：所有活动由成年领队和营地工作人员设计、组织、执行，我负责参与和体验。CISV 的项目设计就是这样，让孩子在偏见形成之前，先和一个外国孩子真实地一起生活一个月。
+          </p>
+        </div>
+        <div class="phase-harvest-label" data-zh="收获" data-en="What I gained">收获</div>
+        <ul class="phase-harvest">
+          <li data-zh="和约 12 个国家的同龄人一起生活了将近一个月，第一次知道不同国家的孩子在吃什么、怎么玩、怎么表达情绪上差别有多大，也开始习惯这些差别。" data-en="Lived with peers from ~12 countries for nearly a month. First time seeing how much children differ across countries in what they eat, how they play, how they express emotions — and getting used to those differences.">和约 12 个国家的同龄人一起生活了将近一个月，第一次知道不同国家的孩子在吃什么、怎么玩、怎么表达情绪上差别有多大，也开始习惯这些差别。</li>
+          <li data-zh="语言不通就用英语加手势加画图。把事情说明白的方式不止一种，这件事 11 岁就学会了。" data-en="When words failed, I used English plus gestures plus drawings. There is more than one way to make yourself understood — I learned that at 11.">语言不通就用英语加手势加画图。把事情说明白的方式不止一种，这件事 11 岁就学会了。</li>
+          <li data-zh="第一次离开父母三周以上，生活上的事全部自己处理，从这个时候开始适应陌生环境。" data-en="First time away from my parents for over three weeks, handling daily life entirely on my own — the point where I started adapting to unfamiliar environments.">第一次离开父母三周以上，生活上的事全部自己处理，从这个时候开始适应陌生环境。</li>
+        </ul>
+        <div class="phase-tags">
+          <span class="cap-tag t1" data-zh="跨文化适应力" data-en="Cross-cultural adaptability">跨文化适应力</span>
+          <span class="cap-tag t2" data-zh="独立生活能力" data-en="Independent living">独立生活能力</span>
+          <span class="cap-tag t3" data-zh="非语言沟通" data-en="Non-verbal communication">非语言沟通</span>
+        </div>
+        <div class="photo-grid cols-2">
+          <div class="photo" data-src="assets/img/2013-1.jpg">
+            <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-zh="2013 中国分队首次亮相" data-en="2013 China delegation debut">2013 中国分队首次亮相</span></div>
+            <div class="caption" data-zh="2013 中国分队首次亮相" data-en="2013 China delegation debut">2013 中国分队首次亮相</div>
+          </div>
+          <div class="photo" data-src="assets/img/2013-2.png">
+            <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-zh="和外国小伙伴" data-en="With international friends">和外国小伙伴</span></div>
+            <div class="caption" data-zh="和外国小伙伴" data-en="With international friends">和外国小伙伴</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 阶段二：东京培训 ===== -->
+<section id="phase2" style="background:linear-gradient(180deg,transparent,rgba(255,201,60,.06),transparent)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker" data-zh="2024.03 · TOKYO, JAPAN" data-en="2024.03 · TOKYO, JAPAN">2024.03 · TOKYO, JAPAN</span>
+      <h2 data-zh="被选为中国区代表，赴东京参加培训" data-en="Selected as China delegate, trained in Tokyo">被选为中国区代表，赴东京参加培训</h2>
+    </div>
+    <div class="phase reveal">
+      <div class="phase-head">
+        <div class="left">
+          <div class="phase-badge badge-sun" data-zh="培训者 · 21 岁" data-en="Trainer · Age 21">培训者 · 21 岁</div>
+          <div class="phase-title" data-zh="被选为中国区代表参与培训" data-en="Selected as China delegate for training">被选为中国区代表参与培训</div>
+        </div>
+      </div>
+      <div class="phase-body">
+        <div class="phase-quote">
+          <p data-zh="21 岁时被选为中国区仅有的两名代表之一，赴日本东京参加当年的 CISV 亚太年度会议（Asia-Pacific Annual Meeting）。" data-en="At 21, I was selected as one of only two delegates from CISV China to attend the Asia-Pacific Annual Meeting in Tokyo, Japan.">
+            21 岁时被选为中国区仅有的两名代表之一，赴日本东京参加当年的 CISV 亚太年度会议（Asia-Pacific Annual Meeting）。
+          </p>
+          <p data-zh="在会上完成 Train the Trainer 培训。该项目面向各国活跃成员，传授国际通用的培训方法，受训者回国后负责培训本国每年外派队伍的领队。" data-en="There I completed Train the Trainer. The programme is for active members across countries, teaching internationally standardized training methods; trainees then return home to train their own national delegation leaders each year.">
+            在会上完成 <strong>Train the Trainer</strong> 培训。该项目面向各国活跃成员，传授国际通用的培训方法，受训者回国后负责培训本国每年外派队伍的领队。
+          </p>
+          <p data-zh="回国后作为培训师，为当年出发的 12 支队伍的领队做行前 leadership training。内容设计结合了培训所学的方法，和自己当年作为参与者的经历。" data-en="Back in China, I served as a trainer, delivering pre-departure leadership training for the leaders of all 12 delegations heading out that year. I combined the methods I had been taught with what I remembered from my own years as a participant.">
+            回国后作为培训师，为当年出发的 12 支队伍的领队做行前 leadership training。内容设计结合了培训所学的方法，和自己当年作为参与者的经历。
+          </p>
+        </div>
+        <div class="phase-harvest-label" data-zh="收获" data-en="What I gained">收获</div>
+        <ul class="phase-harvest">
+          <li data-zh="系统学了一套国际通用的培训方法，包括需求分析、内容设计、现场引导和复盘，之后做培训都有完整的方法可以参照。" data-en="Systematically learned an internationally standardized training method — needs analysis, content design, facilitation, and debrief — so every training since has had a full framework to work from.">系统学了一套国际通用的培训方法，包括需求分析、内容设计、现场引导和复盘，之后做培训都有完整的方法可以参照。</li>
+          <li data-zh="第一次正式给别人做培训，对象是即将出发的 12 支队伍的领队。学会了把会做的事拆开、讲清楚、教给别人。" data-en="First time formally training others — the leaders of all 12 delegations departing that year. Learned to break down what I could do, explain it clearly, and teach it to others.">第一次正式给别人做培训，对象是即将出发的 12 支队伍的领队。学会了把会做的事拆开、讲清楚、教给别人。</li>
+          <li data-zh="设计培训内容时用了很多自己当参与者的经历。亲身经验是可以整理成方法、再传递给别人的。" data-en="Drew heavily on my own participant experience when designing the content. First-hand experience can be organized into methods and passed on.">设计培训内容时用了很多自己当参与者的经历。亲身经验是可以整理成方法、再传递给别人的。</li>
+        </ul>
+        <div class="phase-tags">
+          <span class="cap-tag t1" data-zh="培训方法设计" data-en="Training design">培训方法设计</span>
+          <span class="cap-tag t2" data-zh="知识传递能力" data-en="Knowledge transfer">知识传递能力</span>
+          <span class="cap-tag t3" data-zh="国际化协作" data-en="International collaboration">国际化协作</span>
+        </div>
+        <div class="photo-grid cols-2">
+          <div class="photo" data-src="assets/img/tokyo-1.jpg">
+            <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-zh="东京会议合影" data-en="Tokyo meeting group">东京会议合影</span></div>
+            <div class="caption" data-zh="东京会议合影" data-en="Tokyo meeting group">东京会议合影</div>
+          </div>
+          <div class="photo" data-src="assets/img/tokyo-2.jpg">
+            <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-zh="CISV 国际晚宴" data-en="CISV international dinner">CISV 国际晚宴</span></div>
+            <div class="caption" data-zh="CISV 国际晚宴" data-en="CISV international dinner">CISV 国际晚宴</div>
+          </div>
+        </div>
+        <div class="photo-grid" style="margin-top:14px">
+          <div class="photo" data-src="assets/img/tokyo-3.jpg">
+            <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-zh="各国代表合影" data-en="Delegates from various countries">各国代表合影</span></div>
+            <div class="caption" data-zh="各国代表合影" data-en="Delegates from various countries">各国代表合影</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 阶段三：韩国领队 ===== -->
+<section id="phase3">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker" data-zh="2024 暑假 · ANSEONG, KOREA" data-en="2024 Summer · ANSEONG, KOREA">2024 暑假 · ANSEONG, KOREA</span>
+      <h2 data-zh="带 4 名孩子赴韩国参加 23 天营地" data-en="Led 4 children to a 23-day camp in Korea">带 4 名孩子赴韩国参加 23 天营地</h2>
+    </div>
+    <div class="phase reveal">
+      <div class="phase-head">
+        <div class="left">
+          <div class="phase-badge badge-teal" data-zh="领队 · 21 岁" data-en="Leader · Age 21">领队 · 21 岁</div>
+          <div class="phase-title" data-zh="韩国·安城 · 23 天全封闭营地领队" data-en="Korea · Anseong · 23-day closed camp leader">韩国·安城 · 23 天全封闭营地领队</div>
+        </div>
+      </div>
+      <div class="phase-body">
+        <div class="phase-quote">
+          <p data-zh="带 4 名 11 岁孩子赴韩国安城参加为期 23 天的全封闭营地。11 年前我是营地里被照顾的孩子，这一次换成我来照顾别人。" data-en="Led 4 eleven-year-olds to a 23-day closed camp in Anseong, Korea. Eleven years earlier I had been the child being cared for at camp; this time I was the one taking care of others.">
+            带 4 名 11 岁孩子赴韩国安城参加为期 23 天的全封闭营地。11 年前我是营地里被照顾的孩子，这一次换成我来照顾别人。
+          </p>
+          <p data-zh="与另外 8 个国家的领队及各自的 4 名孩子共同组织 40 场以上教育类活动，主题包括：和平、倾听、特权、国家偏见等。" data-en="Co-organized 40+ educational activities with leaders from 8 other nations and their 4 children each, on themes including peace, listening, privilege, and national prejudice.">
+            与另外 8 个国家的领队及各自的 4 名孩子共同组织 <strong>40 场以上</strong>教育类活动，主题包括：和平、倾听、特权、国家偏见等。
+          </p>
+          <p data-zh="通过高密度跨文化交流，让孩子在短时间内接触世界另一端同龄人的生活方式与性格差异，学会求同存异、在差异中包容。" data-en="Through high-density cross-cultural exchange, children encountered peers from the other side of the world in a short time — learning to find common ground, hold difference, and be inclusive within it.">
+            通过高密度跨文化交流，让孩子在短时间内接触世界另一端同龄人的生活方式与性格差异，学会求同存异、在差异中包容。
+          </p>
+          <p data-zh="角色兼具策划、执行与引导，同时全权负责孩子们的起居照料；23 天全封闭状态对责任心、耐心与抗压能力是持续锻炼。" data-en="The role combined planning, execution, and facilitation, with full responsibility for the children's daily care. 23 days in a closed camp was a sustained exercise of responsibility, patience, and pressure tolerance.">
+            角色兼具策划、执行与引导，同时全权负责孩子们的起居照料；23 天全封闭状态对责任心、耐心与抗压能力是持续锻炼。
+          </p>
+        </div>
+        <div class="phase-harvest-label" data-zh="收获" data-en="What I gained">收获</div>
+        <ul class="phase-harvest">
+          <li data-zh="对 4 名孩子负全责 23 天。白天组织活动、处理孩子之间的矛盾，夜里安抚想家的孩子，这些事没有别人可以交接。" data-en="Fully responsible for 4 children for 23 days: running activities and mediating conflicts by day, comforting homesick kids at night. None of it could be handed off.">对 4 名孩子负全责 23 天。白天组织活动、处理孩子之间的矛盾，夜里安抚想家的孩子，这些事没有别人可以交接。</li>
+          <li data-zh="参与设计并执行 40 多场教育活动，把和平、特权、偏见这些抽象议题做成 11 岁孩子能参与、能听懂的活动。" data-en="Co-designed and ran 40+ educational activities, turning abstract themes like peace, privilege, and prejudice into activities 11-year-olds could take part in and understand.">参与设计并执行 40 多场教育活动，把和平、特权、偏见这些抽象议题做成 11 岁孩子能参与、能听懂的活动。</li>
+          <li data-zh="和 8 个国家的领队合办活动。各国领队的工作节奏、对规则的理解差别很大，有分歧的时候先把事情往前推，再慢慢对齐。" data-en="Co-ran activities with leaders from 8 countries. Work rhythms and interpretations of "rules" differed a lot, so with disagreements I learned to keep things moving first and align gradually.">和 8 个国家的领队合办活动。各国领队的工作节奏、对规则的理解差别很大，有分歧的时候先把事情往前推，再慢慢对齐。</li>
+        </ul>
+        <div class="phase-tags">
+          <span class="cap-tag t1" data-zh="团队全责管理" data-en="Full team ownership">团队全责管理</span>
+          <span class="cap-tag t2" data-zh="课程设计能力" data-en="Curriculum design">课程设计能力</span>
+          <span class="cap-tag t3" data-zh="跨文化协作" data-en="Cross-cultural collaboration">跨文化协作</span>
+        </div>
+        <div class="photo-grid cols-2">
+          <div class="photo" data-src="assets/img/korea-1.jpg">
+            <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-zh="韩国营地大合影" data-en="Korea camp group photo">韩国营地大合影</span></div>
+            <div class="caption" data-zh="韩国营地大合影" data-en="Korea camp group photo">韩国营地大合影</div>
+          </div>
+          <div class="photo" data-src="assets/img/korea-2.png">
+            <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-zh="9 国领队合影" data-en="9-nation leaders">9 国领队合影</span></div>
+            <div class="caption" data-zh="9 国领队合影" data-en="9-nation leaders">9 国领队合影</div>
+          </div>
+        </div>
+        <div class="photo-grid" style="margin-top:14px">
+          <div class="photo" data-src="assets/img/korea-3.jpg">
+            <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-zh="营地生日庆祝" data-en="Camp birthday celebration">营地生日庆祝</span></div>
+            <div class="caption" data-zh="营地生日庆祝" data-en="Camp birthday celebration">营地生日庆祝</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 阶段四：英国 Staff ===== -->
+<section id="phase4" style="background:linear-gradient(180deg,transparent,rgba(142,68,173,.05),transparent)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker" data-zh="2025 暑假 · MANCHESTER, UK" data-en="2025 Summer · MANCHESTER, UK">2025 暑假 · MANCHESTER, UK</span>
+      <h2 data-zh="在英国曼彻斯特营地担任工作人员" data-en="Served as camp staff in Manchester, UK">在英国曼彻斯特营地担任工作人员</h2>
+    </div>
+    <div class="phase reveal">
+      <div class="phase-head">
+        <div class="left">
+          <div class="phase-badge badge-indigo" data-zh="营地 Staff · 22 岁" data-en="Camp Staff · Age 22">营地 Staff · 22 岁</div>
+          <div class="phase-title" data-zh="英国·曼彻斯特 · 唯一国际 staff" data-en="Manchester, UK · sole international staff">英国·曼彻斯特 · 唯一国际 staff</div>
+        </div>
+      </div>
+      <div class="phase-body">
+        <div class="phase-quote">
+          <p data-zh="英国留学期间报名当年营地，角色从领队转为 staff，是团队中唯一的国际工作人员，与 5 位英国本地工作人员共事并被视作 local staff。" data-en="While studying in the UK, I signed up for that year's camp, transitioning from leader to staff. I was the only international staff member, working alongside 5 British local staff and treated as one of them.">
+            英国留学期间报名当年营地，角色从领队转为 staff，是团队中唯一的国际工作人员，与 5 位英国本地工作人员共事并被视作 local staff。
+          </p>
+          <p data-zh="不再带队，但对整个营地及曼彻斯特分部负责，承担上传下达的枢纽角色。" data-en="No longer leading a delegation, but responsible for the entire camp and the Manchester chapter, acting as the hub that relays information up and down.">
+            不再带队，但对整个营地及曼彻斯特分部负责，承担<strong>上传下达的枢纽角色</strong>。
+          </p>
+          <p data-zh="保障营地从早到晚的全部安全和活动落地，同时响应各国代表队随时提出的需求。核心工作是 logistics management：在已有的策划经验之上，重点保障营地整体顺利运转、参与者体验良好。" data-en="Kept every day safe and every activity running from wake-up to lights-out, while fielding requests from delegations at any time. The core of the job was logistics management: on top of the planning experience I already had, making sure the camp as a whole ran smoothly and participants had a good experience.">
+            保障营地从早到晚的全部安全和活动落地，同时响应各国代表队随时提出的需求。核心工作是 <strong>logistics management</strong>：在已有的策划经验之上，重点保障营地整体顺利运转、参与者体验良好。
+          </p>
+          <p data-zh="协作对象来自 9–10 个国家，且这次面对的主要是成年人而非孩子，需要高频地了解需求、分配工作、跨文化沟通与协调。" data-en="Collaborators came from 9–10 countries, and this time they were mostly adults, not children — requiring high-frequency needs-sensing, task distribution, and cross-cultural communication and coordination.">
+            协作对象来自 9–10 个国家，且这次面对的主要是成年人而非孩子，需要高频地了解需求、分配工作、跨文化沟通与协调。
+          </p>
+          <p data-zh="同时担任 16–17 岁青年志愿者群体一个月的监护人（该群体以个人身份参与，需专人带领），负责定期开会复盘、明确其职责边界。" data-en="I also served as guardian for a group of 16–17-year-old youth volunteers for one month (they participate as individuals and need a dedicated lead), running regular debrief meetings and clarifying their scope of responsibility.">
+            同时担任 16–17 岁青年志愿者群体一个月的监护人（该群体以个人身份参与，需专人带领），负责定期开会复盘、明确其职责边界。
+          </p>
+        </div>
+        <div class="phase-harvest-label" data-zh="收获" data-en="What I gained">收获</div>
+        <ul class="phase-harvest">
+          <li data-zh="责任范围从一个队扩大到整个营地和分部。要做的事变多了，更重要的是每件事都连着别人：一处安排出问题，第二天多个国家的活动都会受影响。" data-en="Scope grew from one delegation to an entire camp and chapter. The workload grew, but more importantly everything was connected: one planning slip would disrupt activities for several countries the next day.">责任范围从一个队扩大到整个营地和分部。要做的事变多了，更重要的是每件事都连着别人：一处安排出问题，第二天多个国家的活动都会受影响。</li>
+          <li data-zh="作为团队里唯一的国际成员，先花时间观察本地团队的做事方式，再逐步参与和推动。被信任之后，工作才推得动。" data-en="As the only international member of the team, I first spent time observing how the local team worked, then gradually joined in and pushed things forward. Only after earning their trust did the work really move.">作为团队里唯一的国际成员，先花时间观察本地团队的做事方式，再逐步参与和推动。被信任之后，工作才推得动。</li>
+          <li data-zh="同时负责各国代表队的需求响应和青年志愿者监护两条线，练出了排优先级、多线并行处理的能力。" data-en="Ran two tracks at once — delegation needs and youth-volunteer guardianship — and built up prioritization and parallel task-handling.">同时负责各国代表队的需求响应和青年志愿者监护两条线，练出了排优先级、多线并行处理的能力。</li>
+        </ul>
+        <div class="phase-tags">
+          <span class="cap-tag t1" data-zh="后勤运营管理" data-en="Logistics management">后勤运营管理</span>
+          <span class="cap-tag t2" data-zh="跨文化协调" data-en="Cross-cultural coordination">跨文化协调</span>
+          <span class="cap-tag t3" data-zh="多线程任务管理" data-en="Multi-threaded task management">多线程任务管理</span>
+        </div>
+        <div class="photo-grid cols-2">
+          <div class="photo" data-src="assets/img/uk-1.png">
+            <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-zh="曼彻斯特营地大合影" data-en="Manchester camp group photo">曼彻斯特营地大合影</span></div>
+            <div class="caption" data-zh="曼彻斯特营地大合影" data-en="Manchester camp group photo">曼彻斯特营地大合影</div>
+          </div>
+          <div class="photo" data-src="assets/img/uk-3.jpg">
+            <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-zh="staff 团队" data-en="Staff team">staff 团队</span></div>
+            <div class="caption" data-zh="staff 团队" data-en="Staff team">staff 团队</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 未来计划 ===== -->
+<section id="future" style="padding-bottom:40px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker" data-zh="未来计划" data-en="Future Plans">未来计划</span>
+      <h2 data-zh="未来计划" data-en="Future Plans">未来计划</h2>
+    </div>
+
+    <div class="future-grid">
+      <div class="future-card done reveal">
+        <div class="num">01</div>
+        <h4 data-zh="现任 CISV 中国区青年代表" data-en="Current CISV China Youth Representative">现任 CISV 中国区青年代表</h4>
+        <p data-zh="2025 年起担任中国区青年代表，负责分部与国际之间的青年事务沟通。" data-en="Serving as China chapter's youth representative since 2025, handling youth-affairs communication between the chapter and CISV International.">2025 年起担任中国区青年代表，负责分部与国际之间的青年事务沟通。</p>
+      </div>
+      <div class="future-card reveal delay-1">
+        <div class="num">02</div>
+        <h4 data-zh="主导 30 周年年会策划" data-en="Leading the 30th-anniversary national conference">主导 30 周年年会策划</h4>
+        <p data-zh="CISV 中国区 30 周年，2025 年年底的年会由我主导整体策划，负责议程、内容、人员和运营。" data-en="For CISV China's 30th anniversary, I am leading the overall planning of the end-2025 national conference, covering agenda, content, people, and operations.">CISV 中国区 30 周年，2025 年年底的年会由我主导整体策划，负责议程、内容、人员和运营。</p>
+      </div>
+      <div class="future-card reveal delay-2">
+        <div class="num">03</div>
+        <h4 data-zh="2026 暑期继续担任组织者/领导者" data-en="2026 summer: continuing as organizer/leader">2026 暑期继续担任组织者/领导者</h4>
+        <p data-zh="计划 2026 年暑期在国内或海外营地继续担任组织者或领导者角色。" data-en="Planning to continue as an organizer or leader at a domestic or overseas camp in summer 2026.">计划 2026 年暑期在国内或海外营地继续担任组织者或领导者角色。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ESCAP 联合国实习 ===== -->
+<section id="escap" class="escap-section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker" data-zh="延伸影响" data-en="Extended Impact">延伸影响</span>
+      <h2 data-zh="联合国亚太经社委员会（ESCAP）实习" data-en="UN ESCAP Internship">联合国亚太经社委员会（ESCAP）实习</h2>
+    </div>
+    <div class="escap-card reveal">
+      <div class="escap-body">
+        <h3 data-zh="曼谷 · 6 个月" data-en="Bangkok · 6 months">曼谷 · 6 个月</h3>
+        <div class="escap-meta">
+          <span data-zh="联合国 ESCAP" data-en="UN ESCAP">联合国 ESCAP</span>
+          <span data-zh="贸易、创新、投资部门" data-en="Trade, Innovation & Investment">贸易、创新、投资部门</span>
+          <span data-zh="6 个月" data-en="6 months">6 个月</span>
+        </div>
+        <p data-zh="CISV 十二年积累的跨文化协作经验，直接帮助我在联合国亚太经社委员会（ESCAP）曼谷总部获得了实习机会。在贸易、创新、投资部门工作六个月，参与亚太贸易便利化论坛等国际会议的筹备与执行。" data-en="The cross-cultural collaboration skills built over twelve years with CISV directly helped me secure an internship at the UN ESCAP headquarters in Bangkok. I spent six months in the Trade, Innovation & Investment Division, contributing to international events including the Asia-Pacific Trade Facilitation Forum.">
+          CISV 十二年积累的跨文化协作经验，直接帮助我在联合国亚太经社委员会（ESCAP）曼谷总部获得了实习机会。在贸易、创新、投资部门工作六个月，参与亚太贸易便利化论坛等国际会议的筹备与执行。
+        </p>
+        <p data-zh="这份实习不是独立事件，而是 CISV 经历的延伸：在 ESCAP 的工作对象同样是来自多个国家的同事和代表，需要同样的跨文化沟通、多线程协调和快速适应陌生环境的能力。" data-en="This internship was not an isolated event but an extension of my CISV experience: at ESCAP, I worked with colleagues and delegates from multiple countries, requiring the same cross-cultural communication, multi-threaded coordination, and rapid adaptation to unfamiliar environments.">
+          这份实习不是独立事件，而是 CISV 经历的延伸：在 ESCAP 的工作对象同样是来自多个国家的同事和代表，需要同样的跨文化沟通、多线程协调和快速适应陌生环境的能力。
+        </p>
+        <a href="https://www.unescap.org/" target="_blank" rel="noopener" class="escap-link" data-zh="了解 ESCAP 官网 →" data-en="About ESCAP (official) →">了解 ESCAP 官网 →</a>
+      </div>
+      <div class="escap-photos">
+        <div class="photo" data-src="assets/img/escap-1.jpg">
+          <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-zh="联合国 ESCAP 总部" data-en="UN ESCAP HQ">联合国 ESCAP 总部</span></div>
+          <div class="caption" data-zh="联合国 ESCAP 总部" data-en="UN ESCAP HQ">联合国 ESCAP 总部</div>
+        </div>
+        <div class="photo" data-src="assets/img/escap-2.jpg">
+          <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-zh="亚太贸易便利化论坛" data-en="Asia-Pacific Trade Facilitation Forum">亚太贸易便利化论坛</span></div>
+          <div class="caption" data-zh="亚太贸易便利化论坛" data-en="Asia-Pacific Trade Facilitation Forum">亚太贸易便利化论坛</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 整体感受 ===== -->
+<section id="feeling" style="background:linear-gradient(180deg,transparent,rgba(142,68,173,.04),transparent);padding-top:40px">
+  <div class="wrap">
+    <div class="feeling-box reveal">
+      <div class="quote-mark">"</div>
+      <p data-zh="CISV 的成员年龄跨度极大，从 11 岁的参与者到六十余岁的资深志愿者，来自各大洲不同国家，专业背景与职业方向各不相同。将这些人联结在一起的，不是共同的学科或行业，而是对跨文化理解与和平教育的认同。这种组织形态使得不同领域的人能够围绕全球性议题展开实质性讨论，在十二年的参与经历中，我没有遇到过第二个具备同样特征的组织。" data-en="CISV members span a wide age range, from 11-year-old participants to veteran volunteers in their sixties, coming from different countries across every continent with entirely different professional backgrounds. What connects them is not a shared discipline or industry, but a shared commitment to cross-cultural understanding and peace education. This organizational form enables people from different fields to engage in substantive discussions on global issues. In twelve years of participation, I have not encountered another organization with the same characteristics.">
+        CISV 的成员年龄跨度极大，从 11 岁的参与者到六十余岁的资深志愿者，来自各大洲不同国家，专业背景与职业方向各不相同。将这些人联结在一起的，不是共同的学科或行业，而是对跨文化理解与和平教育的认同。这种组织形态使得不同领域的人能够围绕全球性议题展开实质性讨论，在十二年的参与经历中，我没有遇到过第二个具备同样特征的组织。
+      </p>
+      <p data-zh="对我而言，这段经历的意义远不止夏令营，而是一场跨越整个成长阶段的跨文化理解与能力培养。多年的参与让我真正做到了在生活和工作中都能融入不同的文化环境；从参与者到组织者的完整转变，也让我养成了善于学习、善于融入、富有责任感的性格和做事方式。这也让我非常希望未来的工作内容同样具有跨文化交流的性质，这十二年的积累是我最重要的闪光点之一，也一定会持续助力我的职业发展。" data-en="For me, this journey means far more than a series of summer camps; it has been a cross-cultural education that spanned every stage of my growth. Years of participation have enabled me to truly integrate into different cultural environments, both in daily life and at work. The complete transition from participant to organizer also shaped who I am: someone who learns quickly, adapts to new environments with ease, and takes responsibility seriously. This is exactly why I hope my future work will carry the same cross-cultural nature; these twelve years of experience are among my greatest strengths and will keep supporting my professional growth.">
+        对我而言，这段经历的意义远不止夏令营，而是一场跨越整个成长阶段的跨文化理解与能力培养。多年的参与让我真正做到了在生活和工作中都能融入不同的文化环境；从参与者到组织者的完整转变，也让我养成了善于学习、善于融入、富有责任感的性格和做事方式。这也让我非常希望未来的工作内容同样具有跨文化交流的性质，这十二年的积累是我最重要的闪光点之一，也一定会持续助力我的职业发展。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 联系方式 ===== -->
+<section class="contact-section" id="contact">
+  <div class="wrap">
+    <h2 data-zh="联系方式" data-en="Contact">联系方式</h2>
+    <div class="contact-links">
+      <a href="mailto:zinawang2002@163.com" class="contact-link" data-zh="zinawang2002@163.com" data-en="zinawang2002@163.com">zinawang2002@163.com</a>
+      <a href="https://www.linkedin.com/in/ziyue-wang-688888282" target="_blank" rel="noopener" class="contact-link" data-zh="LinkedIn · Ziyue Wang" data-en="LinkedIn · Ziyue Wang">LinkedIn · Ziyue Wang</a>
+      <a href="assets/resume.pdf" target="_blank" rel="noopener" class="contact-link" data-zh="简历 PDF" data-en="Résumé PDF">简历 PDF</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="footer-line" data-zh="CISV INTERNATIONAL · UNESCO PARTNER · 2013 至今 · ZIYUE WANG" data-en="CISV INTERNATIONAL · UNESCO PARTNER · 2013 – PRESENT · ZIYUE WANG">
+      CISV INTERNATIONAL · UNESCO PARTNER · 2013 至今 · ZIYUE WANG
+    </div>
+  </div>
+</footer>
+
+<!-- ===== Lightbox ===== -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose">×</button>
+  <img src="" alt="" id="lbImg">
+</div>
+
+<script>
+/* ===== 滚动进度条 ===== */
+window.addEventListener('scroll',()=>{
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  const p = (window.scrollY / h) * 100;
+  document.getElementById('progressBar').style.width = p + '%';
+});
+
+/* ===== 中英文切换 ===== */
+const langState = { lang:'zh' };
+function applyLang(lang){
+  langState.lang = lang;
+  document.documentElement.lang = lang==='zh' ? 'zh-CN' : 'en';
+  document.querySelectorAll('[data-zh]').forEach(el=>{
+    const val = el.getAttribute('data-'+lang);
+    if(val !== null){
+      el.innerHTML = val;
+    }
+  });
+  document.getElementById('langZh').classList.toggle('active', lang==='zh');
+  document.getElementById('langEn').classList.toggle('active', lang==='en');
+}
+document.getElementById('langZh').addEventListener('click',()=>applyLang('zh'));
+document.getElementById('langEn').addEventListener('click',()=>applyLang('en'));
+
+/* ===== 移动端菜单 ===== */
+const navBurger = document.getElementById('navBurger');
+const navLinks = document.getElementById('navLinks');
+navBurger.addEventListener('click',()=>navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+
+/* ===== 滚动渐入 ===== */
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+},{threshold:0.12, rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ===== 数字计数动画 ===== */
+const countObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const el = e.target;
+      const target = parseInt(el.getAttribute('data-count'));
+      const suffix = el.textContent.replace(/[0-9]/g,'');
+      let current = 0;
+      const step = Math.max(1, Math.floor(target / 40));
+      const timer = setInterval(()=>{
+        current += step;
+        if(current >= target){ current = target; clearInterval(timer); }
+        el.textContent = current + suffix;
+      }, 25);
+      countObserver.unobserve(el);
+    }
+  });
+},{threshold:0.5});
+document.querySelectorAll('[data-count]').forEach(el=>countObserver.observe(el));
+
+/* ===== 照片加载尝试 + Lightbox ===== */
+const photoEls = document.querySelectorAll('.photo[data-src]');
+photoEls.forEach(p=>{
+  const src = p.getAttribute('data-src');
+  const img = new Image();
+  img.onload = ()=>{
+    const ph = p.querySelector('.placeholder');
+    if(ph) ph.style.display='none';
+    const imgEl = document.createElement('img');
+    imgEl.src = src;
+    imgEl.alt = (p.querySelector('.caption')||{}).textContent || 'CISV photo';
+    p.insertBefore(imgEl, p.firstChild);
+  };
+  img.onerror = ()=>{ /* 占位保留 */ };
+  img.src = src;
+
+  p.addEventListener('click',()=>{
+    if(!src) return;
+    const fullImg = p.querySelector('img');
+    if(!fullImg) return;
+    document.getElementById('lbImg').src = fullImg.src;
+    document.getElementById('lightbox').classList.add('open');
+  });
+});
+
+document.getElementById('lbClose').addEventListener('click',()=>document.getElementById('lightbox').classList.remove('open'));
+document.getElementById('lightbox').addEventListener('click',(e)=>{
+  if(e.target.id==='lightbox') document.getElementById('lightbox').classList.remove('open');
+});
+
+/* ===== 键盘 ESC 关闭 Lightbox ===== */
+document.addEventListener('keydown',(e)=>{
+  if(e.key==='Escape') document.getElementById('lightbox').classList.remove('open');
+});
+</script>
+</body>
+</html>
